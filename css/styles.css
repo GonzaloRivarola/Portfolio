@@ -197,13 +197,13 @@ footer p {
 }
 @media (min-width: 1025px) {
   header {
-    padding: 1rem 16rem;
+    padding: 2rem 16rem;
   }
   header .headernav .aheader {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
   }
-  .logo {
-    width: 4.5rem;
+  header .logo {
+    width: 6rem;
   }
   .ppcontainer {
     padding: 0 0 4rem 0;
@@ -216,7 +216,7 @@ footer p {
     align-items: center;
   }
   .ppcontainer .primeraparte .first_img, .ppcontainer .primeraparte .terceraparte .second_img, .terceraparte .ppcontainer .primeraparte .second_img {
-    height: 34rem;
+    height: 45rem;
   }
   .ppcontainer .primeraparte .first_img .s1img2, .ppcontainer .primeraparte .terceraparte .second_img .s1img2, .terceraparte .ppcontainer .primeraparte .second_img .s1img2 {
     display: block;

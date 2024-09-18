@@ -99,12 +99,13 @@ header {
         }
         
     }
-
     .logo {
-        width: 3.7rem;
+      width: 3.7rem;
 
 
-    }
+  }
+
+
 }
 
 .ppcontainer {
@@ -248,12 +249,12 @@ footer {
   padding: 5rem 1rem;
 
   h3{
-    @include flex-center()
+    @include flex-center;
 
   }
 
   p {
-    @include flex-center()
+    @include flex-center;
   
 
   }
@@ -292,20 +293,21 @@ footer {
 
 
   header {
-    padding: 1rem 16rem;
+    padding: 2rem 16rem;
 
     .headernav {
         .aheader {
-          font-size: 0.8rem;
+          font-size: 1.2rem;
         }
+    }
+    .logo {
+      width: 6rem;
+    
+    
     }
 }
    
-.logo {
-  width: 4.5rem;
 
-
-}
 
 
 
@@ -322,9 +324,8 @@ footer {
   
     
     .first_img{
-      height: 34rem;
+      height: 45rem;
       .s1img2 {
-     
   
         display: block;
   

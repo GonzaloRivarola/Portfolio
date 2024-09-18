@@ -1,5 +1,8 @@
 
 @import 'partials/variables';
+@import 'path/to/normalize.css';
+
+
 
 
 @mixin flex-center {
@@ -11,12 +14,10 @@
 
 
 
+
 *{
     margin: 0;
     padding: 0;
-    width: auto;
-    height: 100;
-
 
   font-family: "Cormorant Garamond", serif;
   font-weight: 700;

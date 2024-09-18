@@ -61,7 +61,7 @@
       }
       
       .socialsimg {
-        width: 2rem; // Ajusta el tamaño de la imagen
+        width: 2rem;
         height: auto;
         margin-right: 0.5rem; 
       }
@@ -368,7 +368,7 @@ footer {
               .imglinks {
                   height: 20rem; 
                   width: auto; 
-                  transition: transform 0.3s ease; // 
+                  transition: transform 0.3s ease; 
 
                  
                   &:hover {
@@ -389,17 +389,15 @@ footer {
 
 .terceraparte {
   padding-top: 10rem;
-  padding-left: 25rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 40rem;
-
+  justify-content: center; 
+  width: 100%;
 
   .second_img {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap; 
+    justify-content: center; 
     align-items: center;
     gap: 1rem;
 
@@ -407,17 +405,23 @@ footer {
       display: flex;
       flex-direction: column;
       align-items: center;
+      text-align: center;
 
       .s3img {
-        transition: opacity 0.1s ease; // Añade transición suave para el efecto
+        transition: opacity 0.1s ease;
+        width: auto; 
+        max-width: 40rem; 
       }
 
       &:hover .s3img {
-        opacity: 0.7;
+        opacity: 0.7; 
       }
     }
   }
 }
+
+
+
 
 
 

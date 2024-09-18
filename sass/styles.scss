@@ -1,0 +1,434 @@
+
+@import 'partials/variables';
+
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: 100;
+
+
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  font-style: normal;
+
+
+}
+
+.contactos{
+  padding-top: 10rem;
+  padding-bottom: 3rem;
+  h1{
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  h2{
+    text-align: center;
+    font-size: 1rem;
+  }
+}
+ 
+.redes {
+  padding-bottom: 12rem;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+
+  .social {
+    display: flex;
+    flex-direction: column; 
+
+    a {
+      padding: .7rem;
+      display: flex;
+      align-items: center;
+      text-decoration: none; 
+      color: inherit;
+      transition: transform 0.3s ease; 
+
+      &:hover {
+        transform: scale(1.1); 
+      }
+      
+      .socialsimg {
+        width: 2rem; // Ajusta el tamaño de la imagen
+        height: auto;
+        margin-right: 0.5rem; 
+      }
+
+      h3 {
+        font-size: 1rem; 
+      }
+    }
+  }
+}
+
+
+
+header {
+
+    padding: .6rem 1rem;  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    background-color: rgb(245, 245, 245);
+
+
+    .aheader {
+        text-decoration: none;
+        padding: 0.4rem;
+        color: $color-text;
+        font-size: 0.7rem;
+
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+        
+    }
+
+    .logo {
+        width: 3.7rem;
+
+
+    }
+}
+
+.ppcontainer {
+  padding-bottom: 2rem;
+  .primeraparte {
+    display: flex;
+    gap: 0;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    
+    .first_img{
+        display: flex;  
+        width: 100%; 
+        height: auto; 
+        gap: 0; 
+        overflow: hidden; 
+
+        .s1img{
+          flex: 1;
+          height: auto;
+          width: 100%;
+          object-fit: cover;
+          
+      }
+  
+      .s1img2 {
+        flex: 1;
+        height: auto;
+        width: 100%;
+        object-fit: cover;
+        display: none;
+  
+      }
+  
+
+    }
+
+
+
+
+
+}
+
+.boton {
+  display: flex;
+  justify-content: center;
+
+  padding-top: 2rem;
+
+  .btn {
+    
+      background-color: $btn-bg-color;
+      color: $btn-text-color;
+      border: $btn-border-width solid $btn-border-color; 
+      border-radius: 0; 
+      padding: $btn-padding;
+      font-size: $btn-font-size;
+      cursor: pointer;
+      transition: background-color $btn-transition-time ease, color $btn-transition-time ease;
+    
+      &:hover {
+        background-color: darken($btn-bg-color, 5%);
+        color: darken($btn-text-color, 10%); 
+      }
+    
+      &:focus {
+        outline: none; 
+      }
+    
+      &:active {
+        background-color: darken($btn-bg-color, 5%); 
+      }
+    }
+
+
+}
+}
+
+
+
+.segundaparte {
+  background-color: rgb(236, 236, 236);
+  padding-bottom: 8rem;
+  padding-top: 4rem;
+
+  
+  h1{
+    text-align: center;
+  }
+
+  h2 {
+    
+    font-size: 1.2rem;
+  }
+
+  nav {
+    padding-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  a{
+    text-decoration: none;
+    color: $color-text;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.36rem;
+  }
+
+  .imglinks {
+    height: 7rem;
+    width: auto;
+  }
+}
+
+.terceraparte {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+  .second_img{
+    @extend .first_img;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+  .s3img{
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+footer {
+  padding: 5rem 1rem;
+
+  h3{
+    @include flex-center()
+
+  }
+
+  p {
+    @include flex-center()
+  
+
+  }
+}
+
+
+// Media query para tablet
+@media (min-width: 720px) {
+
+  .primeraparte {
+    .first_img{ 
+     .s1img2 {
+       display: block;
+ 
+     }
+ 
+
+   }
+  }
+
+   .segundaparte {
+     .imglinks {
+       height: 14rem;
+       
+       }
+
+   }
+
+
+
+}
+
+// Media query para pc
+@media (min-width: 1025px) {
+  
+
+
+  header {
+    padding: 1rem 16rem;
+
+    .headernav {
+        .aheader {
+          font-size: 0.8rem;
+        }
+    }
+}
+   
+.logo {
+  width: 4.5rem;
+
+
+}
+
+
+
+.ppcontainer {
+  padding: 0 0 4rem 0;
+  width: 100%;
+  height: auto;
+  .primeraparte {
+
+    display: flex;
+    gap: 0;
+    align-items: center;
+
+  
+    
+    .first_img{
+      height: 34rem;
+      .s1img2 {
+     
+  
+        display: block;
+  
+      }
+  
+  
+    }
+  
+  }
+  .boton {
+    .btn {
+        
+    
+    font-size: 1.5rem;
+  
+  }
+  }
+}
+
+.segundaparte {
+
+  h1 {
+      text-align: center; 
+      font-size: 2rem;
+  }
+
+  .links {
+      nav {
+          display: flex; 
+          justify-content: center; 
+          gap: 1rem;
+
+          a {
+              display: flex; 
+              flex-direction: column; 
+              align-items: center; 
+              transition: transform 0.3s ease; 
+              &:hover {
+                  transform: scale(1.1); 
+              }
+
+              .imglinks {
+                  height: 20rem; 
+                  width: auto; 
+                  transition: transform 0.3s ease; // 
+
+                 
+                  &:hover {
+                      transform: scale(.9); 
+                  }
+              }
+
+              h2 {
+                  font-size: 1.2rem; 
+                  margin-top: 0.5rem; 
+              }
+          }
+      }
+  }
+}
+
+
+
+.terceraparte {
+  padding-top: 10rem;
+  padding-left: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40rem;
+
+
+  .second_img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .s3img {
+        transition: opacity 0.1s ease; // Añade transición suave para el efecto
+      }
+
+      &:hover .s3img {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
